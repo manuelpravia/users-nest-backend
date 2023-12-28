@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+  db:
+    container_name: mean-db
+    image: mongodb/mongodb-community-server
+    volumes:
+      -./mongo:/data/db
+    ports:
+      -27017:27017
+    restart: always
+
+
+# colocarse en el directorio raid del proyecto y ejecutar:
+# docker compose up -d
+
